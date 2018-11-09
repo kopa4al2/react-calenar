@@ -1,0 +1,23 @@
+.confirmation-modal{
+    margin:auto;
+}
+.confirmation-modal .confirmation-modal-header{
+   text-align: center;
+    font-size:1.6rem;
+    font-weight:bold;
+}
+.confirmation-modal .confirmation-modal-header button{
+    float:right;
+    width:30px;
+    height:30px;
+}
+.confirmation-modal .modal-message{
+    font-size:1.2rem;
+}
+.confirmation-modal .modal-confirmation-container{
+    display:flex;
+    justify-content: space-between;
+}
+.confirmation-modal .modal-confirmation-container button{
+    width:48%;
+}

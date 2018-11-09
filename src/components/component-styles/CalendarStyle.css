@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+.calendar-container {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Special Elite', cursive;
+}
+
+.body-container {
+    width: 60%;
+    padding: 0 5px 30px 5px;
+}
+
+.calendar-header p {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-top: auto;
+    color: #337ab7;
+}
+
+.calendar-header button {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.calendar-header button:nth-child(1) {
+    border-right: 30px dotted #47e2ff;
+}
+
+.calendar-header button:nth-child(3) {
+    border-left: 30px dotted #47e2ff;
+}
+
+.calendar-header button:nth-child(1):hover {
+    border-right: 30px dotted black;
+    cursor: pointer;
+}
+
+.calendar-header button:nth-child(3):hover {
+    border-left: 30px dotted black;
+    cursor: pointer;
+}
+
+.year {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    vertical-align: top;
+}
+
+/*The moving year, should have default class year-center or something but im too lazy to do this*/
+.year p, .month p {
+    position: relative;
+}
+
+.year-left, .month-left {
+    animation:1s moveLeft ease-in-out;
+}
+.year-right, .month-right{
+    animation:1s moveRight ease-in-out;
+}
+
+
+.year > button {
+    height: 20px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-month:hover {
+    cursor: pointer;
+    background: #393939;
+    color: whitesmoke;
+}
+
+.calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    perspective: 600px;
+}
+
+.day-block {
+    /*transition:transform 1s ease;*/
+    flex: 1 0 12%;
+    margin: 5.5px;
+    text-align: center;
+    padding: 9px 4px;
+    color: teal;
+    min-width: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border:2px solid transparent;
+    border-image:url("../../imgs/border.jpg") 15% 220 stretch;
+    box-shadow:2px 2px 5px teal;
+}
+.day-block.current-month{
+
+}
+.block-heading {
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem;
+    border:none;
+    /*CSS SNIPPET from https://leaverou.github.io/css3patterns/*/
+    background:
+            radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+            radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+            radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+            radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+            radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+            radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+            radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+            radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+            linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+            linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300;
+    background-size: 100px 100px;
+}
+
+.last-month, .next-month {
+    color: gray;
+    background: #CCC;
+}
+
+.today {
+    color:#BA8B02;
+}
+
+.today:hover {
+    background: linear-gradient(to right, #BA8B02, #5d450b);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.day-block.active {
+    transition: transform 3s ease;
+    /*transform: translateZ(-40px);*/
+    transform: rotateY(+360deg);
+    background: #393939;
+    color: whitesmoke;
+}
+
+.active.today {
+    background: linear-gradient(to right, #BA8B02, #5d450b);
+}
+@keyframes moveRight {
+    /*0% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    /*50% {*/
+        /*left: 50%;*/
+        /*opacity:0*/
+    /*}*/
+    /*51% {*/
+        /*left: -50%;*/
+        /*opacity:0.1;*/
+    /*}*/
+    /*100% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    /*TODO: CHOOSE CAREFULLY*/
+    from{
+        transform:rotate3d(0, 200, 0, -90deg)  translateX(-100%) ;
+    }
+    to{
+        transform:rotate3d(0, 0, 0, 0)  translateX(0) ;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        left: 0;
+        opacity:1;
+    }
+    50% {
+        left: -50%;
+        opacity:0
+    }
+    51% {
+        left: 50%;
+        opacity:0.1;
+    }
+    90% {
+        left: 0;
+        opacity:1;
+    }
+}
