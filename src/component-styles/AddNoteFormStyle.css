@@ -1,0 +1,9 @@
+.add-note-form{
+}
+.add-note-form .btn {
+    width:100%;
+}
+.add-note-form textarea{
+    resize:none;
+
+}

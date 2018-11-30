@@ -1,0 +1,25 @@
+.confirmation-modal-header {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:-10px;
+}
+.confirmation-modal-header p{
+    text-shadow:1px 1px 55px teal;
+    font-weight:bold;
+    padding-left:20px;
+}
+.confirmation-modal-message{
+    font-size:0.9em;
+    padding:10px 0;
+}
+.confirmation-modal-footer{
+    padding-right:45%;
+    display:flex;
+    justify-content: flex-start;
+}
+.confirmation-modal-footer .btn:first-child{
+    flex-grow:2;
+}
+.confirmation-modal-footer .btn:last-child{
+    flex-grow:1;
+}

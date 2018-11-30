@@ -1,0 +1,36 @@
+.pagination {
+    margin-top: -20px;
+    margin-left:-20px;
+
+}
+.pagination .pag-wrapper{
+    display:flex;
+    margin:auto;
+    box-shadow:1px 1px 3px #23527c;
+}
+.pagination li:hover{
+    cursor:pointer;
+    z-index: 3;
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+.pagination li a{
+    backface-visibility: hidden;
+    position: relative;
+    float: left;
+    padding: 6px 10px 3px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination li.active a{
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}

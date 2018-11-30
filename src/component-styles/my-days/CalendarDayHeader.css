@@ -1,0 +1,57 @@
+.calendar-header {
+    /*Normal*/
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    transition:all 1s linear;
+}
+
+.calendar-header.stretched {
+    /*background-color:#007bff;*/
+    font-size:20px;
+    /*Stretched*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.calendar-header .calendar-day-year-month-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #007bff;
+}
+
+.calendar-header.stretched .calendar-day-year-month-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.calendar-header.stretched .calendar-day-year-month-container:first-child{
+    margin-right:45px;
+}
+.calendar-header.stretched .calendar-day-year-month-container:last-child{
+    margin-left:45px;
+}
+
+.calendar-header .calendar-day-number {
+    padding: 15px 10px 5px 10px;
+}
+
+.calendar-header.stretched .calendar-day-number {
+    padding: 0;
+}
+
+.calendar-header .calendar-day-day-of-week {
+    padding: 25px;
+}
+
+.calendar-header.stretched .calendar-day-day-of-week {
+    padding: 0;
+}
+
+/*.calendar-header.stretched*/

@@ -1,0 +1,43 @@
+.calendar-day-body-navigation{
+    background: linear-gradient(to right, rgba(0, 123, 255, 1), rgba(0,120,250,1));
+    width:85%;
+    margin:auto;
+    perspective: 500px;
+}
+.calendar-day-body-navigation ul{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.calendar-day-body-navigation ul li{
+    list-style: none;
+    padding:2px 10px;
+}
+.calendar-day-body-navigation ul li:hover:not(.active) {
+
+    cursor:pointer;
+}
+.calendar-day-body-navigation ul li:hover:not(.active) a{
+    transition:all .5s ease;
+    color:red;
+    text-decoration:none;
+}
+.calendar-day-body-navigation ul li a {
+    padding:3px 7px;
+    color:#EEE;
+}
+
+.calendar-day-body-navigation .active{
+    transition:all .5s ease;
+    background:#EEEEEE;
+    box-shadow: 1px 1px 10px #AAA;
+
+}
+.active a{
+    text-decoration:none;
+    transition:all 1s ease;
+    color:rgb(1,123,255)!important;
+}
+.active a:hover{
+    cursor:default;
+}

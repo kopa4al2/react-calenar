@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100');
+/*Maybe different width for higher width screens*/
+@media only screen and (max-width: 912px) {
+    .modal-box-content {
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .modal-box-content {
+        width: 75% !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .modal-box-content {
+        width: 95% !important;
+    }
+}
+
+/*Modal idea taken from w3school*/
+.modal-box-background {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden;
+    background-color: rgb(0, 0, 0); /* Fallback color 2 */
+    background-color: rgba(0, 0, 0, 0.4); /* Fallback color */
+    perspective: 400px;
+}
+
+.modal-box-background.shown {
+    display: block;
+}
+
+.modal-box-content {
+    box-shadow: 2px 2px 27px 2px teal;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 26px;
+    text-shadow: 2px 2px 15px black;
+    border-radius: 15px;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    margin:15% auto;
+    transform: rotate3d(1, 20, 2, 5deg);
+}
+
+.modal-box-content .text-warning, .modal-box-content .text-danger {
+    font-size: 0.58em;
+    text-shadow: none;
+    font-style:italic;
+    font-weight:normal;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.text-warning.hide, .text-danger.hide{
+    display:none;
+}
+.modal-box-content.hide {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.modal-box-content.show {
+    opacity: 1;
+    transition: all .4s ease;
+}

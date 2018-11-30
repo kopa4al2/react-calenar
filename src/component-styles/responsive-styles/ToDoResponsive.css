@@ -1,0 +1,56 @@
+@media only screen and (min-width: 1350px) {
+    .todo-list-container form > .form-group .btn {
+        width:30%;
+    }
+    .todo-list-container form > .form-group input {
+        width:70%;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .todo-list-container form > .form-group input {
+        height:52px;
+    }
+}
+@media only screen and (max-width: 927px) {
+    .todo-list-container form > .form-group {
+        display: inline-block;
+        text-align: center;
+        font-size:0.9em;
+    }
+
+    .todo-list-container form > .form-group .btn {
+        width:40%;
+    }
+    .todo-list-container form > .form-group input {
+        width:60%;
+    }
+
+}
+
+@media only screen and (max-width: 841px) {
+    .todo-list-container form .form-group {
+        font-size:0.8em;
+    }
+}
+@media only screen and (max-width: 759px) {
+    .todo-list-container form .form-group {
+        font-size:0.7em;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .todo-list-container form .form-group {
+        font-size:.9em;
+    }
+    .todo-list-container form .form-group > input {
+        width:100%;
+    }
+    .todo-list-container form .form-group > .btn-primary {
+        margin-top:5px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 338px) {
+    .todo-list-container form .form-group {
+        font-size: .7em;
+    }
+}

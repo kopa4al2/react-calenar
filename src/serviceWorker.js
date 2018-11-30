@@ -121,7 +121,7 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. NavigationBar is running in offline mode.'
+        'No internet connection found. CalendarNavigationBar is running in offline mode.'
       );
     });
 }

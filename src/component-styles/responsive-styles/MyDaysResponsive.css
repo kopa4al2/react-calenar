@@ -1,0 +1,8 @@
+@media only screen and (max-width: 900px) {
+    .my-days-container{
+        flex-direction: column;
+    }
+    .my-days-container .btn-primary{
+        font-size:1.3em;
+    }
+}

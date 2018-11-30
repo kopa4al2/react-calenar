@@ -1,0 +1,25 @@
+@media only screen and (max-width: 680px) {
+    .url-container{
+        font-size:0.8em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .url-container{
+        font-size:0.6em;
+    }
+    .url-container li {
+        padding:5px;
+    }
+    .url-container li a {
+        padding:7px 12px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .url-container{
+        font-size:0.5em;
+    }
+    .url-container li a{
+        padding:5px 10px;
+    }
+}

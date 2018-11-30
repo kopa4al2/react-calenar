@@ -1,0 +1,12 @@
+.my-days-container {
+    min-height:200px;
+    display:flex;
+    flex-wrap:wrap;
+    width:95%;
+    margin:auto;
+    position:relative;
+}
+.top-div{
+    display:inline-block;
+    width:100%;
+}

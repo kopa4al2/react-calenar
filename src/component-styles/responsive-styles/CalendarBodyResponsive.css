@@ -1,0 +1,39 @@
+
+@media only screen and (max-width: 927px) {
+    .calendar-container{
+        flex-direction:column;
+    }
+    .calendar-container .body-container{
+        width:100%;
+    }
+    .calendar-container .status-container{
+        margin-bottom:15px;
+        width:100%;
+    }
+    .user-form{
+        font-size:0.95em!important;
+    }
+}
+@media only screen and (max-width: 564px) {
+    .calendar-body .day-block{
+        flex:1 0 11%;
+        font-size:0.7rem;
+        min-width:15px;
+    }
+    .user-form{
+        font-size:0.7em!important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .calendar-body .day-block{
+        flex: 1 0 9%;
+        min-width:8px;
+        font-size:0.5rem;
+    }
+}
+@media only screen and (max-width: 400px) and (min-width: 360px) {
+    .calendar-body .day-block{
+        flex: 1 0 10%;
+        min-width:10px;
+    }
+}

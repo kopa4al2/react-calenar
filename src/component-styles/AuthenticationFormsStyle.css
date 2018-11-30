@@ -1,0 +1,61 @@
+.sasho{
+    width:50%;
+    height:50%;
+}
+/*The font awesome icons for username already exists*/
+.user-form .hide {
+    display: none;
+}
+
+.user-form .show {
+    display: block;
+}
+.user-register-form label{
+    margin-bottom:0;
+}
+.user-register-form .position-relative span {
+    font-size: 1.1rem;
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-register-form .position-relative span:first-of-type {
+    color: #007bff;
+}
+
+.user-register-form .position-relative span:last-of-type {
+    color: #dc3545;
+}
+#username-taken-tooltip {
+    position:absolute;
+    width:150px;
+    left:-130px;
+    text-shadow:none;
+    font-size:1.1em;
+}
+
+
+
+
+/*ON INVALID INPUT SHAKE MODAL ANIMATION*/
+.shake-animate {
+    animation: shake .7s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate3d(1, 20, 2, 5deg);
+    }
+    25% {
+        transform: rotate3d(1, 20, 2, 5deg) rotateY(-15deg);
+    }
+    75% {
+        transform: rotate3d(1, 20, 2, 5deg) rotateY(15deg);
+    }
+    100% {
+        transform: rotate3d(1, 20, 2, 5deg) rotateY(0deg);
+
+    }
+}

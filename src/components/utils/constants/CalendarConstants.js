@@ -7,21 +7,20 @@ const MONTHS_MAP = {
     5: "June",
     6: "July",
     7: "August",
-    8: "Semptember",
+    8: "September",
     9: "October",
     10: "November",
     11: "December",
 };
 
 const DAYS_MAP = {
-    0: "MON",
-    1: "TUE",
-    2: "WED",
-    3: "THU",
-    4: "FRI",
-    5: "SAT",
-    6: "SUN",
-    7: "SUN"
+    0: "MONDAY",
+    1: "TUESDAY",
+    2: "WEDNESDAY",
+    3: "THURSDAY",
+    4: "FRIDAY",
+    5: "SATURDAY",
+    6: "SUNDAY"
 };
 
 module.exports = {MONTHS_MAP, DAYS_MAP};

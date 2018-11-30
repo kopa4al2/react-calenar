@@ -1,0 +1,9 @@
+.my-days-button{
+    width:95%;
+    margin:15px auto;
+}
+.my-days-button button {
+    font-size:1.7em;
+    font-family: 'Cookie', cursive;
+    color: #222222;
+}

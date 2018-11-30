@@ -1,0 +1,42 @@
+.navigation-bar {
+    background: linear-gradient(to right, #333333, #dd1818);
+}
+.logo-container {
+    color:whitesmoke;
+    text-align: center;
+}
+.url-container{
+    border-radius:20px;
+}
+.url-container ul{
+    display:flex;
+    justify-content: space-around;
+}
+.url-container li {
+    list-style: none;
+    padding:15px;
+    color:whitesmoke;
+    font-size:1.3em;
+    font-weight:bold;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+.url-container li a{
+    text-shadow:1px 1px 10px #DDD;
+    color: white;
+    padding:10px 15px;
+    border-radius:13px;
+}
+.url-container li:hover:not(.active) a{
+    background:#EEE;
+    text-decoration:none;
+    color:rgb(0,123,255);
+}
+.url-container .active {
+    transition:all .5s ease;
+    background:#EEE;
+    padding-bottom:15px;
+}
+.url-container .active > a {
+    text-shadow:none;
+}

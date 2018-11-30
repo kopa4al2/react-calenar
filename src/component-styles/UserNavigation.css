@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+.user-navigation-container{
+    width:100%;
+    padding:5px 0 5px 0;
+    background:rgba(255,255,255,0.5);
+    transition:all 1s ease;
+}
+.user-navigation-container .user-nav {
+    display:flex;
+    justify-content: flex-end;
+}
+.user-nav .user-nav-link {
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    list-style:none;
+    margin:0 15px;
+    font-size:1.5em;
+}
+.user-form {
+    font-size:1.2em;
+}
+.user-nav-link.hidden{
+    display:none;
+}

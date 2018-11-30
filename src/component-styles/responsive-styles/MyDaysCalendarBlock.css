@@ -1,0 +1,88 @@
+@media only screen and (max-width: 912px) {
+    .calendar-day.stretched {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .calendar-day.stretched {
+        font-size: .8em;
+    }
+
+    .calendar-day-body-navigation ul {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .calendar-day-body-navigation ul li {
+        width: 50%;
+        transition: width 0.6s linear;
+    }
+
+    .calendar-day-body-navigation ul li:hover:not(.active) {
+        background: #CCC;
+    }
+
+    .calendar-day-body-navigation ul li.active {
+        width: 100%;
+        transition: width 0.6s linear;
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 623px) {
+    .calendar-day.stretched {
+        font-size: .7em;
+    }
+
+    .calendar-day-body-navigation ul {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 489px) {
+    .calendar-day.stretched {
+        font-size: 0.6em;
+    }
+
+    .calendar-day-body-navigation ul {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .calendar-day.stretched {
+        font-size: 0.5em;
+    }
+
+    .calendar-header.stretched {
+        flex-direction: column;
+        margin-left: auto;
+        width: 30%;
+    }
+
+    .calendar-header.stretched div {
+        position:relative;
+    }
+    .calendar-header.stretched div:before {
+        position:absolute;
+        left:-180px;
+        top:0;
+        color:#BA8B02;
+    }
+    .calendar-header.stretched .calendar-day-month:before {
+        content:"Month: ";
+    }
+    .calendar-header.stretched .calendar-day-year:before {
+        content:"Year: ";
+    }
+    .calendar-header.stretched .calendar-day-number:before {
+        content:"Date: ";
+    }
+    .calendar-header.stretched .calendar-day-day-of-week:before {
+        content:"Day of week: ";
+    }
+}

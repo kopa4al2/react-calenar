@@ -1,0 +1,13 @@
+.calendar-app-container{
+    width:90%;
+    background:linear-gradient(to right, rgb(227, 255, 231),rgb(217, 231, 255));
+    margin: 20px auto auto;
+    box-shadow:1px 1px 6px 2px black;
+    transition:all .5s linear;
+}
+*{
+    user-select:none;
+}
+.btn-primary{
+    color: #222222;
+}

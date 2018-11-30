@@ -1,0 +1,69 @@
+#message-box-container.show{
+    width:100px;
+    display:block;
+}
+#message-box-container.hide{
+    display:none;
+}
+.message-box-content {
+    opacity:0;
+    z-index:999999;
+    position:fixed;
+    left:0;
+    top:-40px;
+    width:100%;
+    box-shadow:2px 2px 5px black;
+    /*TAKEN FROM BOOTSTRAP PROGRESS BAR STRIPED*/
+    background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size:1rem 1rem;
+
+
+    transition:all 2s linear;
+    animation: animateStripes 10s linear infinite;
+}
+.message-box-content.hide{
+    top:-40px;
+    opacity:0;
+    transition:all 2s ease;
+}
+
+.message-box-content.show{
+    top:0;
+    opacity:.8;
+    transition:all 2s ease;
+}
+.message-box-message{
+    padding-bottom:10px;
+    text-align:center;
+    font-weight:bold;
+}
+.message-box-message .message-type {
+    font-size:1.2em;
+    margin-right:5px;
+}
+.message-box-content:hover{
+    cursor:pointer;
+}
+
+/*Different message types*/
+.message-box-content.info{
+    /*bootstrap primary color*/
+    background-color: #007bff;
+}
+.message-box-content.success{
+    /*bootstrap success color*/
+    background-color: #28a745;
+}
+.message-box-content.warning{
+    /*bootstrap warning color*/
+    background-color: #ffc107;
+}
+.message-box-content.error{
+    /*bootstrap danger color*/
+    background-color: #dc3545;
+}
+
+@keyframes animateStripes{
+    from{background-position-x: 0px;}
+    to{background-position-x: 500px;}
+}

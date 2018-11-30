@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+.calendar-container {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Special Elite', cursive;
+}
+
+.body-container {
+    width: 60%;
+    padding: 0 5px 30px 5px;
+}
+
+.calendar-header p {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-bottom:0;
+    color: #337ab7;
+}
+
+.calendar-header button {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.calendar-header button:nth-child(1) {
+    border-right: 30px solid #47e2ff;
+    border-right: 30px dotted #47e2ff;
+}
+
+.calendar-header button:nth-child(3) {
+    border-left: 30px solid #47e2ff;
+    border-left: 30px dotted #47e2ff;
+}
+
+.calendar-header button:nth-child(1):hover {
+    border-right: 30px dotted black;
+    cursor: pointer;
+}
+
+.calendar-header button:nth-child(3):hover {
+    border-left: 30px dotted black;
+    cursor: pointer;
+}
+
+.year {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    vertical-align: top;
+}
+
+/*The moving year, should have default class year-center or something but im too lazy to do this*/
+.year p, .month p {
+    position: relative;
+}
+
+.year-left, .month-left {
+    animation:1s moveLeft ease-in-out;
+}
+.year-right, .month-right{
+    animation:1s moveRight ease-in-out;
+}
+
+
+.year > button {
+    height: 20px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Commented part is moving linear left-right*/
+@keyframes moveRight {
+    /*0% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    /*50% {*/
+        /*left: 50%;*/
+        /*opacity:0*/
+    /*}*/
+    /*51% {*/
+        /*left: -50%;*/
+        /*opacity:0.1;*/
+    /*}*/
+    /*100% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    from{
+        transform:rotate3d(0, 200, 0, -70deg)  translateX(-120%) ;
+    }
+    to{
+        transform:rotate3d(0, 0, 0, 0)  translateX(0) ;
+    }
+}
+@keyframes moveLeft {
+    /*0% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    /*50% {*/
+        /*left: -50%;*/
+        /*opacity:0*/
+    /*}*/
+    /*51% {*/
+        /*left: 50%;*/
+        /*opacity:0.1;*/
+    /*}*/
+    /*90% {*/
+        /*left: 0;*/
+        /*opacity:1;*/
+    /*}*/
+    from{
+        transform:rotate3d(0, 200, 0, 70deg)  translateX(120%) ;
+    }
+    to{
+        transform:rotate3d(0, 0, 0, 0)  translateX(0) ;
+    }
+}

@@ -1,0 +1,114 @@
+.notes-list .delete-note-btn {
+    font-weight: bold;
+    float:right;
+}
+
+    /*Notebook style*/
+.notes-view{
+    backface-visibility: hidden;
+    width:90%;
+    margin:auto;
+    background-color: #f5f5f5;
+    perspective: 2000px;
+}
+.notes-list {
+    backface-visibility: hidden;
+    border-radius:10px;
+    box-shadow:2px 2px 4px black;
+    padding: 27px 47px 17px;
+    margin-bottom: 0;
+    line-height:30px;
+
+    border: 1px solid #B5B5B5;
+    background: white;
+    background: linear-gradient(to bottom, #DFE8EC 0%, white 8%) 0 57px;
+    background-size: 100% 30px;
+}
+.notes-list::after {content:''; position:absolute; width:0; top:0; left:39px; bottom:0; border-left:1px solid #F8D3D3;}
+.notes-list li{
+    list-style:none;
+}
+
+.switch-view {
+    width:60%;
+    margin:10px 0 10px 22%;
+    border-radius:10px;
+    box-shadow: 0 0 3pt 2pt #47e2ff;
+    border:none;
+    outline: none;
+    background-color:#47e2ff;
+}
+.switch-view.disabled{
+    pointer-events: none;
+}
+.switch-view:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
+
+/*ANIMATIONS*/
+/*Flip effect from CalendarStatusBar*/
+.notes-container{
+    width:90%;
+    margin:auto;
+    perspective: 600px;
+}
+.view-note-container{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:all 1s;
+    transform-style: preserve-3d;
+    display:grid;
+}
+.view-note-container .notes-view{
+    width:100%;
+    grid-row: 1;
+    grid-column: 1;
+    backface-visibility: hidden
+}
+.view-note-container .save-note {
+    grid-row:1;
+    grid-column:1;
+}
+
+.view-note-container .back {
+    transform: rotateY( 180deg );
+    backface-visibility: hidden
+}
+.view-note-container.flipped{
+    transform: rotateY( 180deg );
+}
+
+.note-anim {
+    /*transition:all .8s linear;*/
+}
+.animate-left, .animate-right{
+    background: white;
+    background: linear-gradient(to bottom, #DFE8EC 0%, white 8%) 0 57px;
+    background-size: 100% 30px;
+}
+.animate-right {
+    animation: moveNotesRight .6s ease;
+}
+.animate-left {
+    animation: moveNotesLeft .6s ease;
+}
+@keyframes moveNotesLeft {
+    from {
+        transform:translateZ(-100px) translateX(-65%) rotateY(-90deg)
+    }
+    to{
+        transform:translateZ(0) rotateY(0)
+    }
+}
+@keyframes moveNotesRight {
+    from {
+        transform:translateZ(100px) translateX(50%) rotateY(90deg)
+    }
+    to{
+        transform:translateZ(0) rotateY(0)
+    }
+}
+
+

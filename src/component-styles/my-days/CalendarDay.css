@@ -1,0 +1,24 @@
+.outer-wrapper {
+    flex-basis: 31%;
+    margin: 10px 6px;
+    background-color: #EEE;
+    box-shadow: 3px 5px 10px #CCC;
+}
+
+.outer-wrapper:hover {
+    background-color: #DDD;
+    cursor: pointer;
+}
+
+.calendar-day {
+    height:100%;
+}
+
+.calendar-day.stretched {
+}
+
+.calendar-day.stretched:hover {
+    background: inherit;
+    cursor: inherit;
+}
+
